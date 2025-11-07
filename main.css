@@ -1,0 +1,56 @@
+* ...existing code... */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color:cadetblue;
+}
+.pokemonball{
+    width: 200px;
+    height: 200px;
+   
+    border-radius: 50%;
+    background: linear-gradient(to bottom, red 50%, white 50%);
+    position: relative;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* ...existing code... */
+.pokemonball::before{
+    content: "";
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 18px;
+    background: brown;
+    border-radius: 6px;
+    z-index: 1;
+}
+.pokemonball::after{
+    /* ...existing code... */
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    background: yellow;
+    border: 8px solid brown;
+    border-radius: 50%;
+    box-shadow: 0 4px 0 rgba(0,0,0,0.15);
+    z-index: 2;
+}
+/* ...existing code... */
